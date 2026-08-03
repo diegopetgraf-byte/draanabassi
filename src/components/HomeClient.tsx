@@ -253,7 +253,7 @@ export function HomeClient() {
                   <div className="absolute inset-0 bg-logo-gradient opacity-15 blur-[40px] rounded-full scale-95 pointer-events-none" />
 
                   {/* Image Frame */}
-                  <div className="relative w-[180px] xs:w-[210px] sm:w-[250px] aspect-square rounded-full overflow-hidden [box-shadow:var(--clay-shadow-lg)] z-10 border border-white/60">
+                  <div className="relative w-[210px] xs:w-[245px] sm:w-[280px] aspect-square rounded-full overflow-hidden [box-shadow:var(--clay-shadow-lg)] z-10 border border-white/60">
                     <img
                       src="/hero.png"
                       alt="Dra. Ana Bassi, médica em Santo André"
@@ -278,7 +278,7 @@ export function HomeClient() {
                       x: { delay: 0.2 },
                       y: { duration: 3.6, repeat: Infinity, ease: "easeInOut" }
                     }}
-                    className="absolute -top-4 -left-10 z-20 pointer-events-auto scale-[0.7] xs:scale-[0.75] origin-top-left"
+                    className="absolute -top-4 -left-10 z-20 pointer-events-auto scale-[0.8] xs:scale-[0.85] origin-top-left"
                   >
                     <div className="bg-secondary rounded-2xl px-3 py-2 flex items-center gap-2 [box-shadow:inset_2px_2px_4px_rgba(255,255,255,0.9),inset_-2px_-2px_4px_rgba(0,0,0,0.05),4px_4px_12px_rgba(0,0,0,0.08),-2px_-2px_8px_rgba(255,255,255,0.8)] border border-white/50">
                       <div className="w-7 h-7 bg-logo-gradient rounded-full flex items-center justify-center shrink-0">
@@ -304,7 +304,7 @@ export function HomeClient() {
                       x: { delay: 0.3 },
                       y: { duration: 3.4, repeat: Infinity, ease: "easeInOut" }
                     }}
-                    className="absolute top-[45%] -right-8 z-20 pointer-events-auto scale-[0.7] xs:scale-[0.75] origin-right"
+                    className="absolute top-[45%] -right-8 z-20 pointer-events-auto scale-[0.8] xs:scale-[0.85] origin-right"
                   >
                     <div className="bg-secondary rounded-2xl px-3 py-2 flex items-center gap-2 [box-shadow:inset_2px_2px_4px_rgba(255,255,255,0.9),inset_-2px_-2px_4px_rgba(0,0,0,0.04),4px_4px_16px_rgba(0,0,0,0.06),-2px_-2px_8px_rgba(255,255,255,0.8)] border border-white/50">
                       <div className="w-7 h-7 bg-logo-gradient rounded-full flex items-center justify-center shrink-0">
@@ -328,7 +328,7 @@ export function HomeClient() {
                       opacity: { delay: 0.4 },
                       y: { duration: 3.2, repeat: Infinity, ease: "easeInOut" }
                     }}
-                    className="absolute -bottom-5 -left-4 z-20 pointer-events-auto scale-[0.7] xs:scale-[0.75] origin-bottom-left"
+                    className="absolute -bottom-5 -left-4 z-20 pointer-events-auto scale-[0.8] xs:scale-[0.85] origin-bottom-left"
                   >
                     <div className="bg-secondary rounded-2xl px-3 py-2 flex items-center gap-2 [box-shadow:inset_2px_2px_4px_rgba(255,255,255,0.9),inset_-2px_-2px_4px_rgba(0,0,0,0.04),4px_4px_16px_rgba(0,0,0,0.06),-2px_-2px_8px_rgba(255,255,255,0.8)] border border-white/50">
                       <div className="w-7 h-7 bg-logo-gradient rounded-full flex items-center justify-center shrink-0">
