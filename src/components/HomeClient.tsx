@@ -246,8 +246,8 @@ export function HomeClient() {
                 Excelência em dermatologia e <span className="text-logo-gradient italic">procedimentos estéticos personalizados</span>
               </h1>
 
-              {/* 2. Photo with widgets - aligned to the right-hand side of the viewer */}
-              <div className="flex justify-end w-full py-8 pr-8 pl-4 overflow-visible">
+              {/* 2. Photo with widgets - aligned to the left-hand side of the viewer */}
+              <div className="flex justify-start w-full py-8 pl-8 pr-4 overflow-visible">
                 <div className="relative">
                   {/* Background Glow */}
                   <div className="absolute inset-0 bg-logo-gradient opacity-15 blur-[40px] rounded-full scale-95 pointer-events-none" />
