@@ -88,9 +88,10 @@ export function HomeClient() {
             <img src="/detail.svg" alt="" className="w-full h-full object-contain" />
           </div>
           <div className="container mx-auto px-4 max-w-7xl relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* DESKTOP HERO LAYOUT */}
+            <div className="hidden lg:grid grid-cols-12 gap-12 items-center">
               {/* Left Column */}
-              <div className="lg:col-span-7 space-y-8 text-left order-2 lg:order-1">
+              <div className="lg:col-span-7 space-y-8 text-left">
                 <div className="hidden sm:inline-flex items-center gap-2 bg-primary/10 px-4 py-2 rounded-full border border-primary/20">
                   <Sparkles className="w-4 h-4 text-primary" />
                   <span className="text-xs font-semibold uppercase tracking-wider text-primary">
@@ -110,7 +111,7 @@ export function HomeClient() {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="h-11 sm:h-14 px-6 sm:px-8 bg-logo-gradient text-white text-xs sm:text-base font-semibold rounded-full flex items-center justify-center shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+                    className="h-11 sm:h-14 px-6 sm:px-8 bg-logo-gradient text-[#2C2C2C] text-xs sm:text-base font-semibold rounded-full flex items-center justify-center shadow-lg transition-transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
                   >
                     Agendar consulta
                     <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
@@ -133,7 +134,7 @@ export function HomeClient() {
               </div>
 
               {/* Right Column - Premium portrait with floating widgets */}
-              <div className="lg:col-span-5 relative flex justify-center items-center py-10 lg:py-6 order-1 lg:order-2 mb-6 lg:mb-0">
+              <div className="lg:col-span-5 relative flex justify-center items-center py-10 lg:py-6">
                 {/* Background Glow */}
                 <div className="absolute inset-0 bg-logo-gradient opacity-15 blur-[60px] rounded-full scale-95 pointer-events-none" />
 
@@ -168,7 +169,7 @@ export function HomeClient() {
                   >
                     <div className="bg-secondary rounded-2xl px-3.5 py-2.5 flex items-center gap-2.5 [box-shadow:inset_2px_2px_4px_rgba(255,255,255,0.9),inset_-2px_-2px_4px_rgba(0,0,0,0.05),4px_4px_12px_rgba(0,0,0,0.08),-2px_-2px_8px_rgba(255,255,255,0.8)] border border-white/50">
                       <div className="w-8 h-8 bg-logo-gradient rounded-full flex items-center justify-center shrink-0">
-                        <Sparkles className="w-4 h-4 text-white" />
+                        <Sparkles className="w-4 h-4 text-[#2C2C2C]" />
                       </div>
                       <div>
                         <p className="font-semibold text-xs text-foreground leading-tight">Precisão Científica</p>
@@ -194,7 +195,7 @@ export function HomeClient() {
                   >
                     <div className="bg-secondary rounded-2xl px-3 py-2.5 flex items-center gap-2.5 [box-shadow:inset_2px_2px_4px_rgba(255,255,255,0.9),inset_-2px_-2px_4px_rgba(0,0,0,0.04),4px_4px_16px_rgba(0,0,0,0.06),-2px_-2px_8px_rgba(255,255,255,0.8)] border border-white/50">
                       <div className="w-8 h-8 bg-logo-gradient rounded-full flex items-center justify-center shrink-0">
-                        <Heart className="w-4 h-4 text-white fill-white" />
+                        <Heart className="w-4 h-4 text-[#2C2C2C] fill-[#2C2C2C]" />
                       </div>
                       <div>
                         <p className="font-semibold text-xs text-foreground leading-tight">Beleza Natural</p>
@@ -217,7 +218,7 @@ export function HomeClient() {
                     className="absolute -bottom-10 -left-6 sm:-bottom-6 sm:-left-8 z-20 pointer-events-auto scale-[0.75] sm:scale-100 origin-bottom-left"
                   >
                     <div className="bg-secondary rounded-2xl px-4 py-3 flex items-center gap-3 [box-shadow:inset_2px_2px_4px_rgba(255,255,255,0.9),inset_-2px_-2px_4px_rgba(0,0,0,0.04),4px_4px_16px_rgba(0,0,0,0.06),-2px_-2px_8px_rgba(255,255,255,0.8)] border border-white/50">
-                      <div className="w-9 h-9 rounded-full bg-logo-gradient flex items-center justify-center text-white shrink-0">
+                      <div className="w-9 h-9 rounded-full bg-logo-gradient flex items-center justify-center text-[#2C2C2C] shrink-0">
                         <Award className="w-5 h-5" />
                       </div>
                       <div>
@@ -228,6 +229,151 @@ export function HomeClient() {
                   </motion.div>
                 </div>
               </div>
+            </div>
+
+            {/* MOBILE HERO LAYOUT */}
+            <div className="lg:hidden flex flex-col space-y-6 text-left relative">
+              {/* Badge */}
+              <div className="inline-flex self-start items-center gap-2 bg-primary/10 px-3.5 py-1.5 rounded-full border border-primary/20">
+                <Sparkles className="w-3.5 h-3.5 text-primary" />
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-primary">
+                  {professional.name} • {professional.crm}
+                </span>
+              </div>
+
+              {/* 1. Hero Title */}
+              <h1 className="text-3xl sm:text-4xl font-heading font-light leading-[1.15] text-foreground">
+                Excelência em dermatologia e <span className="text-logo-gradient italic">procedimentos estéticos personalizados</span>
+              </h1>
+
+              {/* 2. Photo with widgets - aligned to the right-hand side of the viewer */}
+              <div className="flex justify-end w-full py-8 pr-8 pl-4 overflow-visible">
+                <div className="relative">
+                  {/* Background Glow */}
+                  <div className="absolute inset-0 bg-logo-gradient opacity-15 blur-[40px] rounded-full scale-95 pointer-events-none" />
+
+                  {/* Image Frame */}
+                  <div className="relative w-[180px] xs:w-[210px] sm:w-[250px] aspect-square rounded-full overflow-hidden [box-shadow:var(--clay-shadow-lg)] z-10 border border-white/60">
+                    <img
+                      src="/hero.png"
+                      alt="Dra. Ana Bassi, médica em Santo André"
+                      className="w-full h-full object-cover"
+                      width={250}
+                      height={250}
+                      fetchPriority="high"
+                      decoding="sync"
+                    />
+                  </div>
+
+                  {/* Widget 1: Medical Safety (Top Left) */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -15 }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                      y: [0, 6, 0]
+                    }}
+                    transition={{
+                      opacity: { delay: 0.2 },
+                      x: { delay: 0.2 },
+                      y: { duration: 3.6, repeat: Infinity, ease: "easeInOut" }
+                    }}
+                    className="absolute -top-4 -left-10 z-20 pointer-events-auto scale-[0.7] xs:scale-[0.75] origin-top-left"
+                  >
+                    <div className="bg-secondary rounded-2xl px-3 py-2 flex items-center gap-2 [box-shadow:inset_2px_2px_4px_rgba(255,255,255,0.9),inset_-2px_-2px_4px_rgba(0,0,0,0.05),4px_4px_12px_rgba(0,0,0,0.08),-2px_-2px_8px_rgba(255,255,255,0.8)] border border-white/50">
+                      <div className="w-7 h-7 bg-logo-gradient rounded-full flex items-center justify-center shrink-0">
+                        <Sparkles className="w-3.5 h-3.5 text-[#2C2C2C]" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-[10px] text-foreground leading-tight">Precisão Científica</p>
+                        <p className="text-[9px] text-muted-foreground leading-tight mt-0.5">e segurança médica</p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Widget 2: Natural Beauty (Right Middle) */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 15 }}
+                    animate={{
+                      opacity: 1,
+                      x: 0,
+                      y: [0, -6, 0]
+                    }}
+                    transition={{
+                      opacity: { delay: 0.3 },
+                      x: { delay: 0.3 },
+                      y: { duration: 3.4, repeat: Infinity, ease: "easeInOut" }
+                    }}
+                    className="absolute top-[45%] -right-8 z-20 pointer-events-auto scale-[0.7] xs:scale-[0.75] origin-right"
+                  >
+                    <div className="bg-secondary rounded-2xl px-3 py-2 flex items-center gap-2 [box-shadow:inset_2px_2px_4px_rgba(255,255,255,0.9),inset_-2px_-2px_4px_rgba(0,0,0,0.04),4px_4px_16px_rgba(0,0,0,0.06),-2px_-2px_8px_rgba(255,255,255,0.8)] border border-white/50">
+                      <div className="w-7 h-7 bg-logo-gradient rounded-full flex items-center justify-center shrink-0">
+                        <Heart className="w-3.5 h-3.5 text-[#2C2C2C] fill-[#2C2C2C]" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-[10px] text-foreground leading-tight">Beleza Natural</p>
+                        <p className="text-[9px] text-muted-foreground leading-tight mt-0.5">com ciência</p>
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  {/* Widget 3: Professional info (Bottom Left / Center) */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{
+                      opacity: 1,
+                      y: [0, -5, 0]
+                    }}
+                    transition={{
+                      opacity: { delay: 0.4 },
+                      y: { duration: 3.2, repeat: Infinity, ease: "easeInOut" }
+                    }}
+                    className="absolute -bottom-5 -left-4 z-20 pointer-events-auto scale-[0.7] xs:scale-[0.75] origin-bottom-left"
+                  >
+                    <div className="bg-secondary rounded-2xl px-3 py-2 flex items-center gap-2 [box-shadow:inset_2px_2px_4px_rgba(255,255,255,0.9),inset_-2px_-2px_4px_rgba(0,0,0,0.04),4px_4px_16px_rgba(0,0,0,0.06),-2px_-2px_8px_rgba(255,255,255,0.8)] border border-white/50">
+                      <div className="w-7 h-7 bg-logo-gradient rounded-full flex items-center justify-center shrink-0">
+                        <Award className="w-3.5 h-3.5 text-[#2C2C2C]" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-[10px] text-foreground leading-tight">{professional.name}</p>
+                        <p className="text-[9px] text-muted-foreground leading-tight mt-0.5">{professional.crm} • {professional.professionalTitle}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+
+              {/* 3. Phrase (Description) */}
+              <p className="text-sm sm:text-base text-muted-foreground font-light leading-relaxed max-w-2xl">
+                Cuidado médico individualizado que une ciência, tecnologia e sensibilidade para promover saúde, equilíbrio e beleza natural. Cada tratamento é planejado com precisão, segurança e respeito às características de cada paciente.
+              </p>
+
+              {/* 4. CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="h-12 px-6 bg-logo-gradient text-[#2C2C2C] text-sm font-semibold rounded-full flex items-center justify-center shadow-lg transition-transform active:translate-y-0.5 cursor-pointer"
+                >
+                  Agendar consulta
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+                <a
+                  href="#tratamentos"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("tratamentos")?.scrollIntoView({ behavior: "smooth" });
+                  }}
+                  className="h-12 px-6 bg-white border border-border text-foreground text-sm font-semibold rounded-full flex items-center justify-center transition-all hover:bg-secondary cursor-pointer"
+                >
+                  Conhecer os cuidados
+                </a>
+              </div>
+              
+              <p className="text-[10px] text-muted-foreground/80 font-light mt-2">
+                Atendimento individualizado em Santo André.
+              </p>
             </div>
           </div>
         </section>
