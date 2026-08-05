@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { MessageCircleHeart } from "lucide-react";
 
-const WHATSAPP_URL = "https://wa.me/5511921488886";
+const WHATSAPP_URL = "https://api.whatsapp.com/send/?phone=5511921488886&text&type=phone_number&app_absent=0";
 
 export function WhatsAppOverlay() {
   return (
